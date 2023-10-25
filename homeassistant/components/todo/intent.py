@@ -47,14 +47,7 @@ class AddItemIntent(intent.IntentHandler):
             matching_states = intent.async_match_states(
                 hass, name=list_name, domains=[DOMAIN]
             )
-            for list_state in matching_states:
-                for maybe_list in list_entities:
-                    if maybe_list.entity_id == list_state.entity_id:
-                        target_list = maybe_list
-                        break
-
-                if target_list is not None:
-                    break
+            target_list = component.get_entity(list_state.entity_id)
 
             if target_list is None:
                 raise intent.IntentHandleError(f"No list named {list_name}")
