@@ -31,7 +31,8 @@
     "zigpy-zigate==0.12.0",
     "zigpy-znp==0.12.1",
     "universal-silabs-flasher==0.0.15",
-    "pyserial-asyncio-fast==0.11"
+    "pyserial-asyncio-fast==0.11",
+    "zigpy-zboss==1.1.2"
   ],
   "usb": [
     {
@@ -105,6 +106,10 @@
       "pid": "8B34",
       "description": "*bv 2010/10*",
       "known_devices": ["Bitron Video AV2010/10"]
+    },
+    {
+      "vid": "2FE3",
+      "pid": "0100"
     }
   ],
   "zeroconf": [
@@ -128,5 +133,6 @@
       "type": "_slzb-06._tcp.local.",
       "name": "slzb-06*"
     }
-  ]
+  ],
+  "version": "9.9.9"
 }
